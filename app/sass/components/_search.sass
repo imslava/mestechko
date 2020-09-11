@@ -1,0 +1,153 @@
+.search
+  background: $color-gray
+  margin-bottom: 30px
+  border-radius: $border-radius
+  padding: 72px 0 40px
+  &-title
+    text-align: center
+    font-size: 24px
+    line-height: 1.4
+    font-weight: 400
+    margin-bottom: 54px
+    span
+      color: $color-orange
+      border-bottom: 1px solid $color-orange
+      cursor: pointer
+  &-filter
+    background: #ffffff
+    padding: 40px 30px
+    border-radius: $border-radius / 2
+    @include flexbox
+    justify-content: space-between
+    margin-bottom: 40px
+    box-shadow: 0px 20px 40px rgba(117, 163, 255, 0.05)
+    &__section
+      margin-bottom: 40px
+      &:last-child
+        margin-bottom: 0
+      h4
+        font-weight: 400
+        font-size: 16px
+    &__checkbox
+      cursor: pointer
+      margin-top: 15px
+      display: block
+      input
+        @include visually-hidden
+        &:checked + p:before
+          background: $color-orange url(../img/checkbox.svg) no-repeat center center
+          border: 1px solid $color-orange
+      p
+        font-size: 14px
+        position: relative
+        padding-left: 26px
+        &:before
+          content: ''
+          position: absolute
+          left: 0
+          top: 0px
+          width: 16px
+          height: 16px
+          border-radius: 4px
+          border: 1px solid #DADADA
+          display: block
+          transition: .1s
+    &__slider
+      width: 330px
+      height: 2px
+      border-radius: 4px
+      background: #dadada
+      border: 0
+      margin: 23px 0 20px
+      &-row
+        @include flexbox
+        align-items: center
+        justify-content: space-between
+      &-input
+        @include flexbox
+        align-items: center
+        font-size: 14px
+        input
+          width: 70px
+          border-radius: 0
+          border: 0
+          border-bottom: 1px solid #DADADA
+          font-weight: 700
+          margin: 0 5px
+      .noUi-handle
+        width: 16px
+        height: 16px
+        border-radius: 100%
+        background: $color-orange
+        border: 0
+        box-shadow: none
+        right: -8px
+        top: -7px
+        &:before, &:after
+          display: none
+      .noUi-connect
+        background: $color-orange
+    &__reset
+      font-size: 15px
+      color: $color-orange
+      text-decoration: underline
+      cursor: pointer
+    &__control
+      @include flexbox
+      align-items: center
+      justify-content: space-between
+  &-btn
+    padding: 17px 30px
+  &-result
+    @include flexbox
+    margin: 0 -20px
+    &__item
+      width: calc(100% / 2 - 40px)
+      margin: 0 20px 40px
+      background: #ffffff
+      border-radius: $border-radius / 2
+      overflow: hidden
+      box-shadow: 0px 20px 40px rgba(117, 163, 255, 0.05)
+      color: $color-black
+      &-img
+        height: 300px
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center center
+        background-color: #eeeeee
+      &-info
+        padding: 0 30px 25px
+        @include flexbox
+        align-items: flex-start
+      &-type
+        color: #ffffff
+        background: $color-orange
+        line-height: 1
+        padding: 13px 25px
+        border-radius: 42px
+        margin-top: -21px
+      &-name
+        width: 100%
+        padding: 25px 0 
+        h3
+          font-size: 20px
+          font-weight: 500
+          margin-bottom: 5px
+        h4
+          font-size: 16px
+          font-weight: 400
+          color: #909090
+      &-tech
+        width: 100%
+        border-top: 1px solid #E5E5E5
+        border-bottom: 1px solid #E5E5E5
+        @include flexbox
+        justify-content: space-between
+        padding: 17px 0
+        li
+          b
+            font-weight: 500
+          p
+            font-size: 14px
+            color: #706f6f
+            margin-top: 4px

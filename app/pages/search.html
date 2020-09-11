@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="language" content="Russian">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Участки под ИЖС в Подмосковье</title>
+    <link rel="stylesheet" href="css/app.min.css">
+  </head>
+<body>
+  
+  @include('components/_header.html')
+
+  <section class="promo" style="background-image: url(img/promo-home.jpg);">
+    <div class="container">
+      <h1>Участки под ИЖС<br> в Подмосковье</h1>
+      <h2>от 96 000 рублей за сотку</h2>
+      <div class="promo-btn"><a class="btn-green" href="javascript:;"><div class="btn-icon btn-icon__search"></div>Подобрать участок на сайте</a></div>
+    </div>
+  </section>
+
+  <section class="search">
+    <div class="container">
+      <h2 class="search-title">Подберите участки под свои пожелания<br> с помощью фильтра или <span>обратитесь к консультантам</span></h2>
+      <div class="search-filter">
+        <div class="search-filter__col">
+          <div class="search-filter__section">
+            <h4>Район:</h4>
+            <label class="search-filter__checkbox">
+              <input type="checkbox" name="district[]">
+              <p>Солнечногорский район</p>
+            </label>
+            <label class="search-filter__checkbox">
+              <input type="checkbox" name="district[]" checked>
+              <p>Истринский район</p>
+            </label>
+            <label class="search-filter__checkbox">
+              <input type="checkbox" name="district[]" checked>
+              <p>Раменский район</p>
+            </label>
+            <label class="search-filter__checkbox">
+              <input type="checkbox" name="district[]" checked>
+              <p>Ленинский район</p>
+            </label>
+          </div>
+        </div>
+        <div class="search-filter__col">
+          <div class="search-filter__section">
+            <h4>Расстояние до МКАД:</h4>
+            <label class="search-filter__checkbox">
+              <input type="checkbox" name="mkad[]" checked>
+              <p>до 30 км</p>
+            </label>
+            <label class="search-filter__checkbox">
+              <input type="checkbox" name="mkad[]">
+              <p>до 50 км</p>
+            </label>
+            <label class="search-filter__checkbox">
+              <input type="checkbox" name="mkad[]">
+              <p>до 100 км</p>
+            </label>
+          </div>
+          <div class="search-filter__section">
+            <h4>Вид участка:</h4>
+          </div>
+        </div>
+        <div class="search-filter__col">
+          <div class="search-filter__section">
+            <h4>Коммуникации на участке:</h4>
+            <label class="search-filter__checkbox">
+              <input type="checkbox" name="communications[]" checked>
+              <p>Электричество</p>
+            </label>
+            <label class="search-filter__checkbox">
+              <input type="checkbox" name="communications[]">
+              <p>Газ</p>
+            </label>
+            <label class="search-filter__checkbox">
+              <input type="checkbox" name="communications[]" checked>
+              <p>Водопровод</p>
+            </label>
+          </div>
+          <div class="search-filter__section">
+            <h4>Природа:</h4>
+            <label class="search-filter__checkbox">
+              <input type="checkbox" name="nature[]" checked>
+              <p>У реки</p>
+            </label>
+            <label class="search-filter__checkbox">
+              <input type="checkbox" name="nature[]" checked>
+              <p>У озера</p>
+            </label>
+            <label class="search-filter__checkbox">
+              <input type="checkbox" name="nature[]" checked>
+              <p>У леса</p>
+            </label>
+          </div>
+        </div>
+        <div class="search-filter__col">
+          <div class="search-filter__section">
+            <h4>Стоимость за сотку:</h4>
+            <div class="search-filter__slider" id="priceSlider"></div>
+            <div class="search-filter__slider-row">
+              <div class="search-filter__slider-input">
+                <p>от</p><input type="text" id="priceSlider-0" data-min="0"><p>руб.</p>
+              </div>
+              <div class="search-filter__slider-input">
+                <p>до</p><input type="text" id="priceSlider-1" data-max="200000"><p>руб.</p>
+              </div>
+            </div>
+          </div>
+          <div class="search-filter__section">
+            <h4>Площадь:</h4>
+            <div class="search-filter__slider" id="areaSlider"></div>
+            <div class="search-filter__slider-row">
+              <div class="search-filter__slider-input">
+                <p>от</p><input type="text" id="areaSlider-0" data-min="0"><p>соток</p>
+              </div>
+              <div class="search-filter__slider-input">
+                <p>до</p><input type="text" id="areaSlider-1" data-max="50"><p>соток</p>
+              </div>
+            </div>
+          </div>
+          <div class="search-filter__section search-filter__control">
+            <button class="btn-orange search-btn">Подобрать участок</button>
+            <div class="search-filter__reset">Сбросить</div>
+          </div>
+        </div>
+      </div>
+      <div class="search-result">
+        <a class="search-result__item" href="product.html">
+          <div class="search-result__item-img" style="background-image: url(img/product.jpg);"></div>
+          <div class="search-result__item-info">
+            <div class="search-result__item-type">Коммерческая недвижимость</div>
+            <div class="search-result__item-name">
+              <h3>Участок в деревне Пикино</h3>
+              <h4>Солнечногорский район</h4>
+            </div>
+            <ul class="search-result__item-tech">
+              <li>
+                <b>Дачное строительство</b>
+                <p>Вид участка</p>
+              </li>
+              <li>
+                <b>от 6 соток</b>
+                <p>Площадь</p>
+              </li>
+              <li>
+                <b>140 000 руб.</b>
+                <p>Стоимость за сотку</p>
+              </li>
+            </ul>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  @include('components/_footer.html')
+
+  <script src="js/app.min.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>

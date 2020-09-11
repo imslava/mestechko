@@ -1,0 +1,62 @@
+.promo
+  border-radius: $border-radius
+  min-height: 620px
+  background-color: #eeeeee
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  margin-bottom: 30px
+  position: relative
+  overflow: hidden
+  @include flexbox
+  align-items: center
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: linear-gradient(80deg, rgba(28, 32, 35, 0.78) 14.58%, rgba(28, 32, 35, 0) 100%)
+  h1
+    font-size: 36px
+    line-height: 1.4
+    font-family: "Lora", sans-serif
+    font-weight: 400
+    margin-left: 10px
+    span
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        top: 1px
+        bottom: -3px
+        left: -9px
+        right: -9px
+        background: #ffffff
+        z-index: -1
+  h2
+    font-size: 24px
+    line-height: 1.4
+    font-family: "Lora", sans-serif
+    font-weight: 400
+    color: #ffffff
+    margin-bottom: 45px
+    margin-top: 15px
+  &-btn
+    @include flexbox
+    align-items: center
+    width: 100%
+  &-home
+    height: calc(100vh - 46px - 92px - 90px)
+    .container
+      @include flexbox
+      justify-content: center
+    h1
+      text-align: center
+      margin-left: 0
+    &__btn
+      justify-content: center
+      margin-top: 51px
+      .btn-green
+        margin: 0 15px

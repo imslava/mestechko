@@ -32,7 +32,7 @@ function scripts() {
 		'app/js/vendor/fancybox.js',
 		'app/js/vendor/jquery.inputmask.min.js',
 		'app/js/vendor/jquery.validate.min.js',
-		'app/js/vendor/nouislider.min.js',
+		'node_modules/ion-rangeslider/js/ion.rangeSlider.min.js',
 		'app/js/vendor/slick.min.js',
 		'app/js/vendor/wNumb.min.js',
 		'app/js/common.js',

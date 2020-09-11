@@ -1,147 +1,125 @@
-// // function getSlider($nameSlider, _$nameInputs, _$input1, _$input2, _$input1Min, _$input2Max){
+function getSliderOne() {
+  var $inputFrom = $("#priceSlider-0");
+  var $inputTo = $("#priceSlider-1");
+  var instance;
+  var min = 0;
+  var max = 1000;
+  var from = 0;
+  var to = 0;
 
-// //   var $nameSlider = document.getElementById($nameSlider);
+  $("#priceSlider").ionRangeSlider({
+      hide_min_max: true,
+      hide_from_to: true,
+      onStart: updateInputs,
+      onChange: updateInputs,
+      onFinish: updateInputs
+  });
+  instance = $("#priceSlider").data("ionRangeSlider");
 
-// //   var $input1 = document.getElementById($nameSlider + '-0');
-// //   var $input2 = document.getElementById($nameSlider + '-1');
+  function updateInputs (data) {
 
-// //   var $input1Min = $($nameSlider + '-0').data('min');
-// //   var $input2Max = $($nameSlider + '-1').data('max');
+    var Format = wNumb({
+      prefix: '',
+      decimals: 0,
+      thousand: ' '
+    });
 
-// //   var $nameInputs = [$input1, $input2];
+    from = data.from;
+    to = data.to;
+    $inputFrom.prop("value", Format.to(from));
+    $inputTo.prop("value", Format.to(to));
 
-// //   noUiSlider.create($nameSlider, {
-// //     start: [$input2Min/8, $input2Min/1.2],
-// //     step: 1,
-// //     connect: true,
-// //     range: {
-// //         'min': $input1Min,
-// //         'max': $input2Min
-// //     },
-// //     format: wNumb({
-// //       decimals: 0,
-// //       thousand: ' ',
-// //     })
-// //   });
+  }
 
-// //   $nameSlider.noUiSlider.on('update', function (values, handle) {
-// //     $nameInputs[handle].value = values[handle];
-// //   });
+  $inputFrom.on("change", function () {
+      var val = $(this).prop("value");
+      if (val < min) {
+          val = min;
+      } else if (val > to) {
+          val = to;
+      }
+      instance.update({
+          from: val
+      });
+      $(this).prop("value", val);
+  });
 
-// //   $nameInputs.forEach(function (input, handle) {
-// //     input.addEventListener('change', function () {
-// //       $nameSlider.noUiSlider.setHandle(handle, this.value);
-// //     });
-// //     input.addEventListener('keydown', function (e) {
-// //       var values = $nameSlider.noUiSlider.get();
-// //       var value = Number(values[handle]);
-// //       var steps = $nameSlider.noUiSlider.steps();
-// //       var step = steps[handle];
-// //       var position;
-// //       switch (e.which) {
-// //         case 13:
-// //           $nameSlider.noUiSlider.setHandle(handle, this.value);
-// //           break;
-// //         case 38:
-// //           position = step[1];
-// //           if (position === false) {
-// //             position = 1;
-// //           }
-// //           if (position !== null) {
-// //             $nameSlider.noUiSlider.setHandle(handle, value + position);
-// //           }
-// //         break;
-// //         case 40:
-// //           position = step[0];
-// //           if (position === false) {
-// //             position = 1;
-// //           }
-// //           if (position !== null) {
-// //             $nameSlider.noUiSlider.setHandle(handle, value - position);
-// //           }
-// //         break;
-// //       }
-// //     });
-// //   });
-// // };
+  $inputTo.on("change", function () {
+      var val = $(this).prop("value");
+      if (val < from) {
+          val = from;
+      } else if (val > max) {
+          val = max;
+      }
+      instance.update({
+          to: val
+      });
+      $(this).prop("value", val);
+  });
 
-// // var sliderOne = {
-// //   $nameSlider: priceSlider, 
-// //   _$nameInputs: priceInputs, 
-// //   _$input1: priceInput1, 
-// //   _$input2: priceInput2, 
-// //   _$input1Min: priceInput1Min, 
-// //   _$input2Max: priceInput2Max
-// // };
-// // getSlider(sliderOne);
+}
 
+getSliderOne();
 
+function getSliderTwo() {
+  var $inputFrom = $("#areaSlider-0");
+  var $inputTo = $("#areaSlider-1");
+  var instance;
+  var min = 0;
+  var max = 1000;
+  var from = 0;
+  var to = 0;
 
-// function getSlider($nameSlider, $nameInputs, $input1, $input2, $input1Min, $input2Max){
-//   // console.log(params);
-//   var $nameSlider = document.getElementById($nameSlider);
+  $("#areaSlider").ionRangeSlider({
+      hide_min_max: true,
+      hide_from_to: true,
+      onStart: updateInputs,
+      onChange: updateInputs,
+      onFinish: updateInputs
+  });
+  instance = $("#areaSlider").data("ionRangeSlider");
 
-//   var $input1 = document.getElementById($nameSlider + '-0');
-//   var $input2 = document.getElementById($nameSlider + '-1');
+  function updateInputs (data) {
 
-//   var $input1Min = $('#' + $nameSlider + '-0').data('min');
-//   var $input2Max = $('#' + $nameSlider + '-1').data('max');
+    var Format = wNumb({
+      prefix: '',
+      decimals: 0,
+      thousand: ' '
+    });
 
-//   var $nameInputs = [$input1, $input2];
+    from = data.from;
+    to = data.to;
+    $inputFrom.prop("value", Format.to(from));
+    $inputTo.prop("value", Format.to(to));
 
-//   noUiSlider.create($nameSlider, {
-//     start: [$input2Max/8, $input2Max/1.2],
-//     step: 1,
-//     connect: true,
-//     range: {
-//         'min': $input1Min,
-//         'max': $input2Max
-//     },
-//     format: wNumb({
-//       decimals: 0,
-//       thousand: ' ',
-//     })
-//   });
+  }
 
-//   $nameSlider.noUiSlider.on('update', function (values, handle) {
-//     $nameInputs[handle].value = values[handle];
-//   });
+  $inputFrom.on("change", function () {
+      var val = $(this).prop("value");
+      if (val < min) {
+          val = min;
+      } else if (val > to) {
+          val = to;
+      }
+      instance.update({
+          from: val
+      });
+      $(this).prop("value", val);
+  });
 
-//   $nameInputs.forEach(function (input, handle) {
-//     input.addEventListener('change', function () {
-//       $nameSlider.noUiSlider.setHandle(handle, this.value);
-//     });
-//     input.addEventListener('keydown', function (e) {
-//       var values = $nameSlider.noUiSlider.get();
-//       var value = Number(values[handle]);
-//       var steps = $nameSlider.noUiSlider.steps();
-//       var step = steps[handle];
-//       var position;
-//       switch (e.which) {
-//         case 13:
-//           $nameSlider.noUiSlider.setHandle(handle, this.value);
-//           break;
-//         case 38:
-//           position = step[1];
-//           if (position === false) {
-//             position = 1;
-//           }
-//           if (position !== null) {
-//             $nameSlider.noUiSlider.setHandle(handle, value + position);
-//           }
-//         break;
-//         case 40:
-//           position = step[0];
-//           if (position === false) {
-//             position = 1;
-//           }
-//           if (position !== null) {
-//             $nameSlider.noUiSlider.setHandle(handle, value - position);
-//           }
-//         break;
-//       }
-//     });
-//   });
-// };
+  $inputTo.on("change", function () {
+      var val = $(this).prop("value");
+      if (val < from) {
+          val = from;
+      } else if (val > max) {
+          val = max;
+      }
+      instance.update({
+          to: val
+      });
+      $(this).prop("value", val);
+  });
 
-// getSlider(areaSlider, 'areaInputs', 'areaInput1', 'areaInput2', 'areaInput1Min', 'areaInput2Max');
+}
+
+getSliderTwo();

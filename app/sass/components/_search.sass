@@ -53,12 +53,6 @@
           display: block
           transition: .1s
     &__slider
-      width: 330px
-      height: 2px
-      border-radius: 4px
-      background: #dadada
-      border: 0
-      margin: 23px 0 20px
       &-row
         @include flexbox
         align-items: center
@@ -74,19 +68,6 @@
           border-bottom: 1px solid #DADADA
           font-weight: 700
           margin: 0 5px
-      .noUi-handle
-        width: 16px
-        height: 16px
-        border-radius: 100%
-        background: $color-orange
-        border: 0
-        box-shadow: none
-        right: -8px
-        top: -7px
-        &:before, &:after
-          display: none
-      .noUi-connect
-        background: $color-orange
     &__reset
       font-size: 15px
       color: $color-orange
@@ -96,6 +77,28 @@
       @include flexbox
       align-items: center
       justify-content: space-between
+    .irs--flat
+      margin: 23px 0 17px
+      height: 2px
+      .irs-line
+        width: 330px
+        height: 2px
+        border-radius: 4px
+        background: #dadada
+        border: 0
+        top: 0
+      .irs-bar
+        height: 2px
+        top: 0
+        background: $color-orange
+      .irs-handle
+        width: 16px
+        height: 16px
+        border-radius: 100%
+        background: $color-orange
+        top: -7px
+        i
+          display: none
   &-btn
     padding: 17px 30px
   &-result

@@ -143,3 +143,8 @@ $('.search-filter__reset').click(function() {
   $("#areaSlider-1").val(priceMax);
 
 });
+
+$('#select-beast').selectize({
+    create: true,
+    sortField: 'text'
+});

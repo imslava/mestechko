@@ -35,6 +35,7 @@ function scripts() {
 		'node_modules/ion-rangeslider/js/ion.rangeSlider.min.js',
 		'app/js/vendor/slick.min.js',
 		'app/js/vendor/wNumb.min.js',
+		'app/js/vendor/selectize.min.js',
 		'app/js/common.js',
 		])
 	.pipe(concat('app.min.js'))

@@ -19,4 +19,17 @@ $(document).ready(function(){
 		$('.promo h1').html().replace(/(\S+)/g,'<span>$1</span>')
 	);
 
+	function scroll() {
+		$(".js-scroll").on("click", function (event) {
+			event.preventDefault();
+			var id  = $(this).attr('href'),
+			top = $(id).offset().top;
+			$('html, body').animate({
+				scrollTop: top
+			}, 1500);
+		});
+	}
+
+	scroll();
+
 });

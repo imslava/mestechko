@@ -144,7 +144,6 @@ $('.search-filter__reset').click(function() {
 
 });
 
-$('#select-beast').selectize({
+$('.search-filter__select').selectize({
     create: true,
-    sortField: 'text'
 });

@@ -57,6 +57,7 @@ function getSliderOne() {
       $(this).prop("value", val);
   });
 
+
 }
 
 getSliderOne();
@@ -123,3 +124,22 @@ function getSliderTwo() {
 }
 
 getSliderTwo();
+
+$('.search-filter__reset').click(function() {
+  $('.search-filter input:checked').prop('checked', false);
+  
+  $("#priceSlider").data("ionRangeSlider").reset();
+
+  var priceMin = $("#priceSlider").data('min');
+  var priceMax = $("#priceSlider").data('max');
+  $("#priceSlider-0").val(priceMin);
+  $("#priceSlider-1").val(priceMax);
+
+  $("#areaSlider").data("ionRangeSlider").reset();
+
+  var priceMin = $("#areaSlider").data('min');
+  var priceMax = $("#areaSlider").data('max');
+  $("#areaSlider-0").val(priceMin);
+  $("#areaSlider-1").val(priceMax);
+
+});

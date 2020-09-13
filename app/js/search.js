@@ -39,9 +39,9 @@ function getSliderOne() {
           val = to;
       }
       instance.update({
-          from: val
+          from: val.toString().replace(/\s/g, '')
       });
-      $(this).prop("value", val);
+      $(this).prop("value", val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
   });
 
   $inputTo.on("change", function () {
@@ -52,9 +52,9 @@ function getSliderOne() {
           val = max;
       }
       instance.update({
-          to: val
+          to: val.toString().replace(/\s/g, '')
       });
-      $(this).prop("value", val);
+      $(this).prop("value", val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
   });
 
 

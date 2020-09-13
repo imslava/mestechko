@@ -1,13 +1,21 @@
 {
-  "name": "start-template-gulp",
+  "name": "mestechko",
   "version": "1.0.0",
-  "description": "",
+  "description": "Верстка проекта по продаже земельных участков",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imslava/mestechko.git"
+  },
   "author": "Slava Khripushin",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imslava/mestechko/issues"
+  },
+  "homepage": "https://github.com/imslava/mestechko#readme",
   "devDependencies": {
     "browser-sync": "^2.26.12",
     "crypto-random-string": "^3.3.0",

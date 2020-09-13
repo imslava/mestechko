@@ -2,18 +2,201 @@
   .container
     max-width: 1024px
 
+  .search-filter__area
+    width: calc(100% + 40px)
+    @include flexbox
+    margin: 0 -20px
+    .search-filter__section
+      width: calc(100% / 2 - 40px)
+      margin: 0 20px
+  .search-filter__control
+    margin-top: 40px !important
+
 @include media(lg)
   .container
     max-width: 768px
+  
+  .header-logo
+    width: 82px
+    overflow: hidden
+    img
+      max-width: initial
+  .header-phone
+    margin-right: 30px
+  .header-info__item
+    margin-left: 30px
+
+  .search-result__item
+    width: calc(100% - 40px)
 
 @include media(md)
   .container
     max-width: 576px
+  
+  .promo h1
+    font-size: 26px
+  .promo h2
+    font-size: 20px
+
+  .header-info
+    width: 100%
+    order: 2
+    margin-top: 15px
+    .header-info__item:first-child
+      margin-left: 0
+  
+  .footer
+    text-align: center
+  .footer-copyright
+    width: 100%
+  .footer-link
+    margin-top: 15px
+    margin-right: auto
+
+  .search-filter__col:nth-child(1),
+  .search-filter__col:nth-child(2)
+    width: calc(100%  / 2 - 20px)
+  .search-filter__col:nth-child(1)
+    margin-right: 40px
+  
+  .search-filter__select .selectize-input
+    width: 100%
+
+  .search-filter__slider-input:last-child
+    margin-top: 10px
+
+  .search-filter__proof
+    width: calc(100% + 40px)
+    @include flexbox
+    margin: 40px -20px
+    .search-filter__section
+      width: calc(100% / 2 - 40px)
+      margin: 0 20px
+  
+  .search-filter__control
+    width: 100% !important
 
 @include media(sm)
   .container
     max-width: 475px
 
+  .search-filter__col,
+  .search-filter__proof
+    width: 100% !important
+    margin: 0 !important
+  .search-filter__section
+    width: 100% !important
+    margin: 0 0 20px !important
+  .search-filter
+    padding: 20px 15px
+
+  .search-filter__slider-input:last-child
+    margin-top: 0
+
+  .search-title
+    font-size: 20px
+    margin-bottom: 30px
+    br
+      display: none
+
+  .search
+    padding: 35px 0 10px  
+  .search-filter
+    margin-bottom: 30px
+  .search-result__item
+    margin-bottom: 30px
+  .search-result__item-tech
+    justify-content: flex-start
+  .search-result__item-tech li
+    margin-right: 20px
+    &:first-child
+      width: calc(100% - 20px)
+      margin-bottom: 20px
+
 @include media(xs)
   .container
     max-width: 100%
+  
+  body
+    padding: 15px 15px 0
+  
+  .footer
+    padding: 15px
+
+  .header,
+  .promo
+    margin-bottom: 15px
+  
+  .header-info__item
+    margin-left: 15px
+
+  .header-phone p
+    display: none
+  .header-phone a
+    font-size: 18px
+  .header-phone
+    margin-right: 15px
+  
+  .header-burger
+    margin-left: 16px
+    &:before
+      left: -15px
+  
+  .header-logo
+    width: 72px
+  .header-logo img
+    height: 40px
+  
+  .btn-green, .btn-orange
+    font-size: 14px
+
+  .search-result__item-info
+    padding: 0 15px 10px
+  .search-result__item-name
+    padding: 15px 0
+  .search-result__item-name h3
+    font-size: 18px
+  .search-result__item-name h4
+    font-size: 14px
+  .search-result__item-proof
+    margin-top: 0
+  .search-result__item-proof li
+    font-size: 14px
+    margin-right: 20px
+  .search-result__item-type
+    font-size: 14px
+    padding: 10px 15px
+    margin-top: -17px
+  .search-result__item-img
+    height: 200px
+
+@include media(xxs)
+  .search-filter__slider-input
+    width: 100%
+    &:last-child
+      margin-top: 10px
+  .search-btn
+    width: 100%
+    justify-content: center
+  .search-filter__reset
+    margin: 20px auto 0
+  .search-filter
+    padding-bottom: 0
+  .search-title
+    font-size: 18px
+
+  .search-result__item-tech li
+    margin-right: 0
+    width: 100% !important
+    margin-bottom: 10px !important
+    &:last-child
+      margin-bottom: 0
+  .search-result__item-tech li b
+    font-size: 14px
+  .search-result__item-tech li p
+    font-size: 12px
+  .search-result__item-tech
+    padding: 9px 0
+
+  .btn-icon
+    display: none

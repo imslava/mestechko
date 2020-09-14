@@ -1,0 +1,40 @@
+.map
+  margin-bottom: 30px
+  &-top
+    position: relative
+    &:before
+      content: ''
+      height: 122px
+      position: absolute
+      left: 0
+      right: 0
+      bottom: -120px
+      background: url(../img/map-cloud.png) no-repeat center center
+      z-index: 1
+  &-content
+    height: 700px
+    border-radius: $border-radius
+    background: #eeeeee
+    position: relative
+    overflow: hidden
+    .container
+      position: initial
+      @include flexbox
+      justify-content: flex-end
+  &-form
+    margin-top: 160px
+    position: relative
+    z-index: 5
+    h3
+      text-align: center
+      font-size: 18px
+      line-height: 1.4
+      margin-bottom: 16px
+    h4
+      text-align: center
+  &-yandex
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0

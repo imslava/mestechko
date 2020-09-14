@@ -16,6 +16,11 @@
   .container
     max-width: 768px
   
+  .overflow
+    margin-right: 0
+    .header-menu ul
+      margin-right: 0
+
   .header-logo
     width: 82px
     overflow: hidden
@@ -112,6 +117,13 @@
     &:first-child
       width: calc(100% - 20px)
       margin-bottom: 20px
+  
+  .header-menu ul
+    padding-top: 60px
+    li
+      margin-top: 40px
+      a
+        font-size: 20px
 
 @include media(xs)
   .container

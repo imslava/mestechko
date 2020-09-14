@@ -32,4 +32,10 @@ $(document).ready(function(){
 
 	scroll();
 
+	$('.header-burger').on('click', function(){
+		$(this).toggleClass('header-burger-open');
+		$('body').toggleClass('overflow');
+		$('.header-menu').fadeToggle();
+	});
+
 });

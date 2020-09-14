@@ -28,3 +28,75 @@
   &-orange
     background: $color-orange
     box-shadow: 0px 11px 22px -6px rgba(240, 128, 90, 0.25)
+  &-form
+    padding: 19px 35px
+    width: 100%
+    justify-content: center
+    margin-top: -5px
+
+.title
+  text-align: center
+  font-size: 36px
+  line-height: 1.4
+  font-family: "Lora", sans-serif
+  font-weight: 400
+
+.form
+  background: #ffffff
+  box-shadow: 0px 20px 40px rgba(117, 163, 255, 0.05)
+  border-radius: $border-radius / 2
+  max-width: 415px
+  width: 100%
+  padding: 30px
+  h4
+    color: $color-lightblack
+    font-size: 14px
+    line-height: 1.4
+    font-weight: 400
+    margin-bottom: 25px
+  small
+    display: block
+    margin: 0
+    padding: 0
+    font-size: 14px
+    color: $color-orange
+    font-weight: 500
+  &-politic
+    display: block
+    margin-top: 15px
+    input
+      @include visually-hidden
+      &:checked + p:before
+        background: $color-orange url(../img/checkbox.svg) no-repeat center center
+        border: 1px solid $color-orange
+    p
+      font-size: 10px
+      position: relative
+      padding-left: 26px
+      color: $color-lightblack
+      &:before
+        content: ''
+        position: absolute
+        left: 0
+        top: -2px
+        width: 16px
+        height: 16px
+        border-radius: 4px
+        border: 1px solid #DADADA
+        display: block
+        transition: .1s  
+      a
+        color: $color-orange
+        border-bottom: 1px solid $color-orange
+.input
+  width: 100%
+  display: block
+  padding: 0
+  border: 0
+  border-bottom: 2px solid #DDDDE6
+  height: 45px
+  font-size: 18px
+  border-radius: 0
+  margin-bottom: 33px
+  @include placeholder
+    color: #a5a6bf

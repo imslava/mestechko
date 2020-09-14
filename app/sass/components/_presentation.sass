@@ -1,0 +1,48 @@
+.presentation
+  background: $color-gray
+  border-radius: $border-radius
+  padding: 52px 0 110px
+  margin-bottom: 60px
+  .container
+    @include flexbox
+  &-macbook
+    position: absolute
+    bottom: -110px
+    left: -393px
+    z-index: -1
+  &-text
+    width: 330px
+    margin-left: auto
+    .title
+      text-align: left
+      margin-bottom: 37px
+      // @include flexbox
+      img
+        display: inline-block
+    h3
+      font-size: 18px
+      line-height: 1.4
+      font-weight: 400
+      margin-bottom: 15px
+      padding-left: 30px
+    &__list
+      padding-left: 30px
+      li
+        position: relative
+        font-size: 14px
+        line-height: 1.4
+        padding-left: 35px
+        margin-bottom: 11px
+        &:before
+          content: ''
+          position: absolute
+          top: 9px
+          left: 0
+          width: 25px
+          height: 2px
+          background: $color-orange
+        &:last-child
+          margin-bottom: 0
+  &-form
+    margin-top: 57px
+    margin-left: 55px

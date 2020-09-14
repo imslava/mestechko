@@ -1,0 +1,46 @@
+.plus
+  .title
+    margin: 0 auto 50px
+  &-row
+    @include flexbox
+    margin: 0 -15px
+  &-item
+    width: calc(100% / 3 - 30px)
+    margin: 0 15px 30px
+    border-radius: $border-radius
+    background-color: $color-gray
+    background-repeat: no-repeat
+    line-height: 1.4
+    padding: 40px 30px 55px
+    height: 370px
+    @include flexbox
+    align-items: flex-end
+    &:nth-child(2n)
+      align-items: flex-start
+    h3
+      font-size: 18px
+      font-weight: 700
+      width: 100%
+    p
+      font-size: 14px
+      color: $color-lightblack
+      margin-top: 18px
+      width: 100%
+    &-1
+      background-image: url(../img/plus-1.png)
+      background-position: top left
+    &-2
+      background-image: url(../img/plus-2.png)
+      background-position: bottom center
+    &-3
+      background-image: url(../img/plus-3.png)
+      background-position: top right
+    &-4
+      background-image: url(../img/plus-4.png)
+      background-position: bottom right
+    &-5
+      background-image: url(../img/plus-5.png)
+      background-position: top left
+    &-6
+      background-image: url(../img/plus-6.png)
+      background-position: bottom right 20px

@@ -54,6 +54,17 @@
     max-width: initial
     left: -400px
     bottom: -40px
+    
+  .promo-product__text,
+  .promo-product__tech
+    width: 100%
+  .promo-product__text
+    padding-right: 0
+  .promo-product__tech
+    margin-top: 40px
+
+  .promo-product__btn
+    margin-top: 0
 
 @include media(md)
   .container
@@ -62,6 +73,8 @@
   .promo h1,
   .title
     font-size: 26px
+  .promo h1 br
+    display: none
   .promo h2
     font-size: 20px
 
@@ -127,6 +140,11 @@
     width: 800px
   .presentation-text h3
     font-size: 16px
+
+  .promo-product__btn .btn-link
+    margin-left: 0
+    margin-top: 30px
+    margin-right: 100px
 
 @include media(sm)
   .container
@@ -278,6 +296,19 @@
     padding: 25px 0 30px
   .presentation-form
     margin-top: 27px
+
+  .promo-product
+    padding-bottom: 15px
+    &__tech
+      padding: 25px 15px 20px
+
+  .promo-product__btn
+    .btn-link
+      margin-right: auto
+      margin-left: auto
+    .btn-orange
+      width: 100%
+      justify-content: center
 
 @include media(xxs)
   .search-filter__slider-input

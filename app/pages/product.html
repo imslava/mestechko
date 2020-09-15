@@ -16,11 +16,61 @@
 
   <section class="promo promo-product" style="background-image: url(img/product-1.jpg);">
     <div class="container">
-      <h1>Участки ИЖС в дер. Пикино<br> с расположением в 20 км<br> от МКАДА с коммуникациями  </h1>
-      <h2>за 150 тыс. рублей за сотку</h2>
-      <div class="promo-btn"><a class="btn-green js-scroll" href="#search"><div class="btn-icon btn-icon__search"></div>Подобрать участок на сайте</a></div>
+      <div class="promo-product__text">
+        <div class="promo-product__docs"><img src="img/product-docs.svg" alt="">Документы<br> проверены юристами</div>
+        <h1>Участки ИЖС в дер. Пикино<br> с расположением в 20 км<br> от МКАДА с коммуникациями</h1>
+        <h2>за 150 тыс. рублей за сотку</h2>
+        <div class="promo-product__btn"><a class="btn-orange js-scroll" href="#map">Записаться на просмотр</a><a href="javascript:;" data-fancybox data-src="#more-popup" class="btn-link">Мне нужно больше 2 участков</a></div> 
+      </div>
+      <div class="promo-product__tech">
+        <h4>Технические характеристики</h4>
+        <ul class="promo-product__tech-list">
+          <li>
+            <p>Особенности участка</p>
+            <b>У реки, электричество</b>
+          </li>
+          <li>
+            <p>Вид права</p>
+            <b>Собственность</b>
+          </li>
+          <li>
+            <p>Вид разрешенного использования</p>
+            <b>ИЖС</b>
+          </li>
+          <li>
+            <p>Площадь</p>
+            <b>от 10 до 12 соток</b>
+          </li>
+          <li class="promo-product__tech-numbers">
+            <p>Кадастровые номера</p>
+            <b>50:09:0060504:753/752/751/750/758/757/756/755,50:09:0060504:3037</b>
+          </li>
+        </ul>
+        <a href="#plus" class="promo-product__tech-btn js-scroll">Подробнее</a>
+      </div>
     </div>
   </section>
+  
+  <div class="popup" id="more-popup">
+    <div class="form">
+      <h4>Больше 2 участков</h4>
+      <form action="#" method="post" class="js-validate-consult">
+        <label>
+          <small>Как вас зовут?</small>
+          <input type="text" name="name" class="input" placeholder="Иван Петров" />
+        </label>
+        <label>
+          <small>Ваш номер телефона</small>
+          <input type="tel" name="phone" class="input masked" placeholder="+7 (___) ___-__-__" />
+        </label>
+        <button type="submit" class="btn-orange btn-form">Заказать звонок</button>
+        <label class="form-politic">
+          <input type="checkbox" checked />
+          <p>Я прочитал и согласен с условиями <a href="javascript:;" data-fancybox data-src="#politic-popup">Политики конфиденциальности</a></p>
+        </label>
+      </form>
+    </div>
+  </div>
 
   <section class="gallery">
     <div class="container">
@@ -69,7 +119,7 @@
     </div>
   </section>
   
-  <section class="plus">
+  <section class="plus" id="plus">
     <div class="container">
       <h2 class="title">6 причин купить именно наши участки</h2>
       <div class="plus-row">
@@ -113,7 +163,7 @@
     </div>
   </section>
 
-  <section class="map">
+  <section class="map" id="map">
     <div class="map-top">
       <div class="container">
         <h2 class="title">Хотите посетить участок лично?<br> У нас уже все готово</h2>

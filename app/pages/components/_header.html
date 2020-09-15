@@ -1,3 +1,24 @@
+<div class="popup" id="call-popup">
+  <div class="form">
+    <h4>Дежурный менеджер перезвонит вам в течении 5 минут в рабочее время</h4>
+    <form action="#" method="post">
+      <label>
+        <small>Как вас зовут?</small>
+        <input type="text" name="name" class="input" placeholder="Иван Петров" />
+      </label>
+      <label>
+        <small>Ваш номер телефона</small>
+        <input type="tel" name="phone" class="input masked" placeholder="+7 (___) ___-__-__" />
+      </label>
+      <button type="submit" class="btn-orange btn-form">Заказать звонок</button>
+      <label class="form-politic">
+        <input type="checkbox" checked />
+        <p>Я прочитал и согласен с условиями <a href="javascript:;" data-fancybox data-src="#politic-popup">Политики конфиденциальности</a></p>
+      </label>
+    </form>
+  </div>
+</div>
+
 <header class="header">
   <a class="header-logo" href="/"><img src="img/logo.svg" alt=""></a>
   <div class="header-info">
@@ -12,7 +33,7 @@
   </div>
   <div class="header-phone">
     <a href="tel:+7 (499) 113 38 88">+7 (499) 113 38 88</a>
-    <p>заказать звонок</p>
+    <p data-fancybox data-src="#call-popup">заказать звонок</p>
   </div>
   <div class="header-burger"></div>
   <div class="header-menu">

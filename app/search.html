@@ -12,7 +12,28 @@
   </head>
 <body>
   
-  <header class="header">
+  <div class="popup" id="call-popup">
+  <div class="form">
+    <h4>Дежурный менеджер перезвонит вам в течении 5 минут в рабочее время</h4>
+    <form action="#" method="post">
+      <label>
+        <small>Как вас зовут?</small>
+        <input type="text" name="name" class="input" placeholder="Иван Петров" />
+      </label>
+      <label>
+        <small>Ваш номер телефона</small>
+        <input type="tel" name="phone" class="input masked" placeholder="+7 (___) ___-__-__" />
+      </label>
+      <button type="submit" class="btn-orange btn-form">Заказать звонок</button>
+      <label class="form-politic">
+        <input type="checkbox" checked />
+        <p>Я прочитал и согласен с условиями <a href="javascript:;" data-fancybox data-src="#politic-popup">Политики конфиденциальности</a></p>
+      </label>
+    </form>
+  </div>
+</div>
+
+<header class="header">
   <a class="header-logo" href="/"><img src="img/logo.svg" alt=""></a>
   <div class="header-info">
     <div class="header-info__item">
@@ -26,7 +47,7 @@
   </div>
   <div class="header-phone">
     <a href="tel:+7 (499) 113 38 88">+7 (499) 113 38 88</a>
-    <p>заказать звонок</p>
+    <p data-fancybox data-src="#call-popup">заказать звонок</p>
   </div>
   <div class="header-burger"></div>
   <div class="header-menu">
@@ -48,9 +69,30 @@
     </div>
   </section>
 
+  <div class="popup" id="consult-popup">
+    <div class="form">
+      <h4>Дежурный менеджер перезвонит вам в течении 5 минут в рабочее время и расскажет про предложения которых ещё нет на сайте</h4>
+      <form action="#" method="post">
+        <label>
+          <small>Как вас зовут?</small>
+          <input type="text" name="name" class="input" placeholder="Иван Петров" />
+        </label>
+        <label>
+          <small>Ваш номер телефона</small>
+          <input type="tel" name="phone" class="input masked" placeholder="+7 (___) ___-__-__" />
+        </label>
+        <button type="submit" class="btn-orange btn-form">Заказать звонок</button>
+        <label class="form-politic">
+          <input type="checkbox" checked />
+          <p>Я прочитал и согласен с условиями <a href="javascript:;" data-fancybox data-src="#politic-popup">Политики конфиденциальности</a></p>
+        </label>
+      </form>
+    </div>
+  </div>
+
   <section class="search" id="search">
     <div class="container">
-      <h2 class="search-title">Подберите участки под свои пожелания<br> с помощью фильтра или <span>обратитесь к консультантам</span></h2>
+      <h2 class="search-title">Подберите участки под свои пожелания<br> с помощью фильтра или <span data-fancybox data-src="#consult-popup">обратитесь к консультантам</span></h2>
       <div class="search-filter">
         <div class="search-filter__col">
           <div class="search-filter__section">
@@ -229,6 +271,16 @@
   <div class="footer-copyright">© 2008-2020 МЕСТЕЧКО.РФ<br> продажа жилых и промышленных участков в Подмосковье</div>
   <div class="footer-link"><a href="javascript:;" data-fancybox data-src="#politic-popup">Политика конфинденциальности</a></div>
 </footer>
+
+<div class="popup" id="politic-popup">
+  <h3>Политика конфиденциальности</h3>
+  <p>1. Сбор данных. Администрация сайта собирает только ту информацию, которая обеспечивает возможность поддержки связи с зарегистрированным пользователем. На данном сайте собираются адрес электронной почты, имя, номер телефона и название компании. Все данные оставляются посетителями сайта добровольно. Некоторые данные автоматически сохраняются в логах сервера. Например, сведения об IP-адресе, типе браузера, времени запроса.</p>
+  <p>2. Использование информации. Полученная от зарегистрированного пользователя информация используется для связи с ним. В том числе &#8212; для отправки персонализированных сообщений.</p>
+  <p>3. Раскрытие данных третьим лицам. Администрация сайта не передаёт, не обменивает и не продаёт личные данные зарегистрированных пользователей. В случае необходимости, данные пользователей могут быть переданы третьим лицам для: &#8212; соблюдения закона, нормативно-правового акта, исполнения решения суда; &#8212; предоставления информации на основании запроса уполномоченных государственных органов; &#8212; устранения технических неисправностей в работе сайта; &#8212; выявления или воспрепятствования мошенничеству.</p>
+  <p>4. Защита данных. Администрация сайта принимает меры для защиты данных зарегистрированных пользователей от несанкционированного доступа.</p>
+  <p>5. Изменения и обновления. Текст политики конфиденциальности может быть обновлён или изменён без уведомления об этом зарегистрированных пользователей. Актуальная версия текста находится на данной странице.</p>
+  <p>6. Согласие с политикой конфиденциальности. Регистрируясь на данном сайте, пользователь автоматически соглашается с политикой обработки данных.</p>
+</div>
 
   <script src="js/app.min.js"></script>
   <script src="js/search.js"></script>

@@ -98,5 +98,13 @@
   font-size: 18px
   border-radius: 0
   margin-bottom: 33px
+  transition: .3s
   @include placeholder
     color: #a5a6bf
+  &.error
+    border-bottom: 2px solid #ff7070
+    @include placeholder
+      color: #ff7070
+
+label.error
+  @include visually-hidden

@@ -12,6 +12,14 @@ $(document).ready(function(){
 
 	$('.js-validate').validate({
 		rules: {
+			name: {required: true},
+			phone: {required: true}
+		}
+	});
+
+	$('.js-validate-consult').validate({
+		rules: {
+			name: {required: true},
 			phone: {required: true}
 		}
 	});

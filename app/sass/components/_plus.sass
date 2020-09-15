@@ -1,5 +1,6 @@
 .plus
-  margin-bottom: 35px
+  margin: 0 -30px 35px
+  overflow: hidden
   .title
     margin: 0 auto 50px
   &-row
@@ -16,8 +17,6 @@
     height: 370px
     @include flexbox
     align-items: flex-end
-    &:nth-child(2n)
-      align-items: flex-start
     h3
       font-size: 18px
       font-weight: 700
@@ -33,15 +32,36 @@
     &-2
       background-image: url(../img/plus-2.png)
       background-position: bottom center
+      align-items: flex-start
     &-3
       background-image: url(../img/plus-3.png)
       background-position: top right
     &-4
       background-image: url(../img/plus-4.png)
       background-position: bottom right
+      align-items: flex-start
     &-5
       background-image: url(../img/plus-5.png)
       background-position: top left
     &-6
       background-image: url(../img/plus-6.png)
       background-position: bottom right 20px
+      align-items: flex-start
+  .slick-dots
+    @include flexbox
+    align-items: center
+    justify-content: center
+    margin-top: 20px
+    li
+      margin: 0 10px
+      button
+        padding: 0
+        margin: 0
+        border: 0
+        font-size: 0
+        width: 12px
+        height: 12px
+        border-radius: 100%
+        background: #ececec
+      &.slick-active button
+        background: $color-green

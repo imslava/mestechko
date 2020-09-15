@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
 	$('[data-fancybox]').fancybox({
-		touch: false
+		touch: false,
+		autoFocus: false
 	});
 
 	$(".masked").inputmask({

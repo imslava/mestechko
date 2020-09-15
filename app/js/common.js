@@ -24,6 +24,20 @@ $(document).ready(function(){
 		}
 	});
 
+	$('.js-validate-presentation').validate({
+		rules: {
+			name: {required: true},
+			phone: {required: true}
+		}
+	});
+
+	$('.js-validate-map').validate({
+		rules: {
+			name: {required: true},
+			phone: {required: true}
+		}
+	});
+
 	$('.promo h1').html(
 		$('.promo h1').html().replace(/(\S+)/g,'<span>$1</span>')
 	);

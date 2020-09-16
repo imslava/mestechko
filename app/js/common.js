@@ -39,21 +39,6 @@ $(document).ready(function(){
 		}
 	});
 
-	// $('.promo h1').html(
-	// 	$('.promo h1').html().replace(/(\S+)/g,'<span>$1</span>').split(' ')
-	// );
-
-// 	$('.promo h1').each(function(){
-// 		var text = $(this).html().split(' '),
-// 				len = text.length,
-// 				result = []; 
-
-// 		for( var i = 0; i < len; i++ ) {
-// 				result[i] = '<span>' + text[i] + '</span>';
-// 		}
-// 		$(this).html(result.join(' '));
-// });    
-
 	function scroll() {
 		$(".js-scroll").on("click", function (event) {
 			event.preventDefault();
@@ -69,8 +54,13 @@ $(document).ready(function(){
 
 	$('.header-burger').on('click', function(){
 		$(this).toggleClass('header-burger-open');
-		$('body').toggleClass('overflow');
 		$('.header-menu').fadeToggle();
+
+		$("body").toggleClass("compensate-for-scrollbar");
+		$(".header-menu ul").toggleClass("compensate-for-scrollbar-menu");
+
 	});
+
+	$("head").append('<style type="text/css">.compensate-for-scrollbar, .compensate-for-scrollbar-menu{margin-right:' + (window.innerWidth - document.documentElement.clientWidth) + "px;}</style>");
 
 });

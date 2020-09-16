@@ -39,9 +39,20 @@ $(document).ready(function(){
 		}
 	});
 
-	$('.promo h1').html(
-		$('.promo h1').html().replace(/(\S+)/g,'<span>$1</span>')
-	);
+	// $('.promo h1').html(
+	// 	$('.promo h1').html().replace(/(\S+)/g,'<span>$1</span>').split(' ')
+	// );
+
+// 	$('.promo h1').each(function(){
+// 		var text = $(this).html().split(' '),
+// 				len = text.length,
+// 				result = []; 
+
+// 		for( var i = 0; i < len; i++ ) {
+// 				result[i] = '<span>' + text[i] + '</span>';
+// 		}
+// 		$(this).html(result.join(' '));
+// });    
 
 	function scroll() {
 		$(".js-scroll").on("click", function (event) {

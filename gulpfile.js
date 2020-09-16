@@ -44,6 +44,20 @@ function scripts() {
 	.pipe(browserSync.stream())
 }
 
+function search() {
+	return src('app/js/search.js')
+	.pipe(concat('search.min.js'))
+	.pipe(uglify())
+	.pipe(dest('app/js/'))
+}
+
+function product() {
+	return src('app/js/product.js')
+	.pipe(concat('product.min.js'))
+	.pipe(uglify())
+	.pipe(dest('app/js/'))
+}
+
 // стили
 function styles() {
 	return src('app/sass/main.sass')
@@ -69,6 +83,8 @@ function buildcopy() {
 	return src([
 		'app/css/app.min.css',
 		'app/js/app.min.js',
+		'app/js/product.min.js',
+		'app/js/search.min.js',
 		'app/img/**/*',
 		'app/fonts/**/*',
 		'app/*.html',
@@ -81,6 +97,8 @@ function versionFile(){
 	return src('dist/*.html')
 		.pipe(replace('app.min.css', 'app.min.css?v=' + randomVersion + ''))
 		.pipe(replace('app.min.js', 'app.min.js?v=' + randomVersion + ''))
+		.pipe(replace('product.js', 'product.min.js?v=' + randomVersion + ''))
+		.pipe(replace('search.js', 'search.min.js?v=' + randomVersion + ''))
 	.pipe(dest('dist'))
 }
 
@@ -106,4 +124,4 @@ exports.scripts = scripts;
 exports.styles = styles;
 
 exports.default = parallel(htmlInclude, styles, scripts, browsersync, startwatch);
-exports.build = series(htmlInclude, cleandist, styles, scripts, buildcopy, versionFile);
+exports.build = series(htmlInclude, product, search, cleandist, styles, scripts, buildcopy, versionFile);

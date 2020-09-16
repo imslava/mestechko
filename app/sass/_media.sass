@@ -91,6 +91,10 @@
     margin-left: -15px
     .header-info__item
       margin-top: 15px
+      margin-left: 15px
+      &:last-child
+        margin-left: auto
+        width: 241px
   
   .footer
     text-align: center
@@ -228,8 +232,11 @@
   .promo
     margin-bottom: 15px
   
-  .header-info__item
-    margin-left: 15px
+  .header-info
+    .header-info__item
+      &:last-child
+        margin-left: auto
+        width: 177px
 
   .header-phone p
     display: none
@@ -325,6 +332,11 @@
 
   .search-filter__reset
     margin: 30px auto 0
+
+@media(max-width: 381px)
+  .header-info .header-info__item:last-child
+        margin-left: 15px
+        width: auto
 
 @include media(xxs)
   .search-filter__slider-input
